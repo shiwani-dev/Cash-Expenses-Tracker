@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 
-type MenuItem = {
+interface MenuItem {
   name: string;
 
   //   Omit,Record,Union,Interface, classed based interface union, AND, OR in ts
   path: string;
-};
+}
 
-type SidebarProps = {
+interface SidebarProps {
   items: MenuItem[];
-};
+}
 
 function Sidebar({ items }: SidebarProps) {
   return (

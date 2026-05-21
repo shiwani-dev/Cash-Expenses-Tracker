@@ -1,7 +1,13 @@
+import { Button } from "@/components/ui/button";
 import Table from "../components/Table";
 
 function Tracker() {
-  return <Table />;
+  return (
+    <>
+      <Table />
+      <Button>hey</Button>
+    </>
+  );
 }
 
 export default Tracker;
