@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 type MenuItem = {
   name: string;
+
+  //   Omit,Record,Union,Interface, classed based interface union, AND, OR in ts
   path: string;
 };
 

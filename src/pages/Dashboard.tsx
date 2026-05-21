@@ -1,4 +1,8 @@
+import { useStore } from "../store/useStore";
+
 function Dashboard() {
-  return <h1>Dashboard Page</h1>;
+  const expenses = useStore((state) => state.expenses);
+
+  return <h1>Total items: {expenses.length}</h1>;
 }
 export default Dashboard;

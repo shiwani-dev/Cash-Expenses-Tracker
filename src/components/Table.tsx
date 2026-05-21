@@ -1,29 +1,17 @@
-type Expense = {
-  id: number;
-  text: string;
-};
+import { useStore } from "../store/useStore";
 
-type TableProps = {
-  input: string;
-  setInput: (value: string) => void;
-  expenses: Expense[];
-  editId: number | null;
-  addExpense: () => void;
-  updateExpense: () => void;
-  startEdit: (expense: Expense) => void;
-  deleteExpense: (id: number) => void;
-};
+function Table() {
+  const {
+    input,
+    setInput,
+    expenses,
+    editId,
+    addExpense,
+    updateExpense,
+    startEdit,
+    deleteExpense,
+  } = useStore();
 
-function Table({
-  input,
-  setInput,
-  expenses,
-  editId,
-  addExpense,
-  updateExpense,
-  startEdit,
-  deleteExpense,
-}: TableProps) {
   return (
     <div>
       <h2>Expense Tracker</h2>
