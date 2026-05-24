@@ -1,77 +1,77 @@
-// import { useStore } from "../store/useStore";
+import { useStore } from "../store/useStore";
 
-// function Table() {
-//   const {
-//     input,
-//     setInput,
-//     food,
-//     setFood,
-//     price,
-//     setPrice,
-//     date,
-//     setDate,
+function Table() {
+  const {
+    input,
+    setInput,
+    food,
+    setFood,
+    price,
+    setPrice,
+    date,
+    setDate,
 
-//     expenses,
-//     editId,
-//     addExpense,
-//     updateExpense,
-//     startEdit,
-//     deleteExpense,
-//   } = useStore();
+    expenses,
+    editId,
+    addExpense,
+    updateExpense,
+    startEdit,
+    deleteExpense,
+  } = useStore();
 
-//   return (
-//     <div>
-//       <h2>Expense Tracker</h2>
+  return (
+    <div>
+      <h2>Expense Tracker</h2>
 
-//       <input
-//         value={input}
-//         onChange={(e) => setInput(e.target.value)}
-//         placeholder="Enter expense"
-//       />
+      <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Enter expense"
+      />
 
-//       <input
-//         value={price}
-//         type="number"
-//         onChange={(e) => setPrice(Number(e.target.value))}
-//         placeholder="Price"
-//       />
+      <input
+        value={price}
+        type="number"
+        onChange={(e) => setPrice(Number(e.target.value))}
+        placeholder="Price"
+      />
 
-//       <input
-//         value={food}
-//         onChange={(e) => setFood(e.target.value)}
-//         placeholder="Food"
-//       />
+      <input
+        value={food}
+        onChange={(e) => setFood(e.target.value)}
+        placeholder="Food"
+      />
 
-//       <input
-//         type="date"
-//         value={date.toISOString().split("T")[0]}
-//         onChange={(e) => setDate(new Date(e.target.value))}
-//         placeholder="Date"
-//       />
+      <input
+        type="date"
+        value={date.toISOString().split("T")[0]}
+        onChange={(e) => setDate(new Date(e.target.value))}
+        placeholder="Date"
+      />
 
-//       {editId ? (
-//         <button onClick={updateExpense}>Update</button>
-//       ) : (
-//         <button onClick={addExpense}>Add</button>
-//       )}
+      {editId ? (
+        <button onClick={updateExpense}>Update</button>
+      ) : (
+        <button onClick={addExpense}>Add</button>
+      )}
 
-//       <ul>
-//         {expenses.map((expense) => (
-//           <li key={expense.id}>
-//             {expense.text}
+      <ul>
+        {expenses.map((expense) => (
+          <li key={expense.id}>
+            {expense.text}
 
-//             <button onClick={() => startEdit(expense)}>Edit</button>
-//             <button onClick={() => deleteExpense(expense.id)}>Delete</button>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
+            <button onClick={() => startEdit(expense)}>Edit</button>
+            <button onClick={() => deleteExpense(expense.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
-// export default Table;
+export default Table;
 
-import {
+/* import {
   Table,
   TableBody,
   TableCaption,
@@ -158,3 +158,4 @@ export default function TableDemo() {
     </Table>
   );
 }
+ */
